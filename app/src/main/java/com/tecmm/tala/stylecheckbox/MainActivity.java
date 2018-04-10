@@ -27,18 +27,21 @@ public class MainActivity extends AppCompatActivity {
                     editText.setTypeface(null,Typeface.BOLD|Typeface.ITALIC);
                 else if (chkBold.isChecked())
                     editText.setTypeface(null,Typeface.BOLD);
+                else if(!chkBold.isChecked() && chkItalic.isChecked())
+                    editText.setTypeface(null,Typeface.ITALIC);
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
         });
         chkItalic.setOnClickListener(new View.OnClickListener() {
             @Override
-
             public void onClick(View view) {
                 if (chkItalic.isChecked() && chkBold.isChecked())
                     editText.setTypeface(null,Typeface.BOLD|Typeface.ITALIC);
                 else if (chkItalic.isChecked())
                     editText.setTypeface(null,Typeface.ITALIC);
+                else if(!chkItalic.isChecked() && chkBold.isChecked())
+                    editText.setTypeface(null,Typeface.BOLD);
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
